@@ -9,7 +9,7 @@ let songArtist = document.querySelector(".artist");
 let songLink = document.querySelector(".song-link");
 
 // button variable
-let add = document.querySelector(".add");
+let addBtn = document.querySelector(".add");
 
 
 // task 6: declare variables for your display divs: the image url, song name, artist, and song link. Go back to the HTML to check that you are using the correct class names.
@@ -23,10 +23,10 @@ let displayLink = document.querySelector(".display-link");
 
 
 // task 7: create and populate an array to store your image urls. Create three more arrays. One to store your song names, one for the artists, and a last one for the song links.
-let imageArray = [ ]
-let songNamesArray = [ ]
-let artistsArray = [ ]
-let songLinksArray = [ ]
+let imageArray = ["https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.theatlantic.com%2Fculture%2Farchive%2F2022%2F08%2Fsteve-lacy-bad-habit-gemini-rights%2F671166%2F&psig=AOvVaw3zZjt3hkHDjLCUQC-Zk7ld&ust=1674775753465000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCLjhtYHw4_wCFQAAAAAdAAAAABAE", "https://www.google.com/url?sa=i&url=https%3A%2F%2Ftheshaderoom.com%2Fcelebrity-tory-lanez%2F&psig=AOvVaw07ZcSv9JgapiHQFP9nWnsW&ust=1674775791354000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCNDI2JPw4_wCFQAAAAAdAAAAABAE"]
+let songNamesArray = ["Bad Habit", "The Color Violet"]
+let artistsArray = ["Steve Lacy", "Tory Lanez"]
+let songLinksArray = ["https://www.youtube.com/watch?v=VF-FGf_ZZiI", "https://www.youtube.com/watch?v=6HNFGLCaVFI"]
 
 
 
@@ -50,22 +50,22 @@ let songLinksArray = [ ]
 
 function addSongInfo() {
 
-// task 9: declare a variable to save the user input of the image url. Declare three more variables that save user input: One for the song names, one for the artists, and a last one for the song links.
+  // task 9: declare a variable to save the user input of the image url. Declare three more variables that save user input: One for the song names, one for the artists, and a last one for the song links.
 
-  
+
   let userInputSongLink = songLink.value;
   let userInputSongName = songName.value;
   let userInputArtist = songArtist.value;
   let userInputImageURL = songImage.value
 
-// task 10: use `.push()` to add each input value to the correct array.
+  // task 10: use `.push()` to add each input value to the correct array.
 
   imageArray.push(userInputImageURL)
   songNamesArray.push(userInputSongName)
   artistsArray.push(userInputArtist)
   songLinksArray.push(userInputSongLink)
-  
-  
+
+
 }
 
 
@@ -85,38 +85,48 @@ function emptyDisplay() {
 
 function displaySongInfo() {
 
-// task 8: loop through your images array and display the images to your songs in the correct div. Create three more loops. One for the song names, one for the artists, and a last one for the song links.
+  // task 8: loop through your images array and display the images to your songs in the correct div. Create three more loops. One for the song names, one for the artists, and a last one for the song links.
 
   //Images Array
-  for(let i = 0; i<imageArray.length; i++){
-    
+  for (let i = 0; i < imageArray.length; i++) {
+
+    // songImage.src = imageArray[i]
+    // <img src= />
+    console.log(imageArray[i])
+    console.log('images')
+    displayImage.insertAdjacentHTML("beforeend", `<img src = ${imageArray[i]}>`)
   }
 
   //Song Name array
-  for(let i = 0; i<songNamesArray.length; i++){
-    
+  for (let i = 0; i < songNamesArray.length; i++) {
+    console.log('songs')
+    console.log(songNamesArray[i])
+    displaySong.insertAdjacentHTML("beforeend", `<p>${songNamesArray[i]}</p>`)
   }
 
   //Song Artist array
-  for(let i = 0; i<artistsArray.length; i++){
-    
+  for (let i = 0; i < artistsArray.length; i++) {
+
   }
 
   //Song lings array
-  for(let i = 0; i<songLinksArray.length; i++)
+  for (let i = 0; i < songLinksArray.length; i++) {
+
+  }
+
 
 }
 
 
 
 
-
 // click event to add and display songs
-add.onclick = function() {
+addBtn.onclick = function() {
+  console.log("hello");
+  emptyDisplay();
   addSongInfo();
   displaySongInfo();
-  emptyDisplay();
 };
 
-// function call to display stored songs
+  // function call to display stored songs
 displaySongInfo();
