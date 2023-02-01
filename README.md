@@ -31,7 +31,7 @@ They will use .push to add new songs to their playlist. Then, students will refa
 
 ## JavaScript: Loop and Display Data
 
-8. [] Loop through your images array and display the images to your songs in the correct div. Create three more loops. One for the song names, one for the artists, and a last one for the song links.
+8. [X] Loop through your images array and display the images to your songs in the correct div. Create three more loops. One for the song names, one for the artists, and a last one for the song links.
 
 What to display your song data in:
 
@@ -53,7 +53,7 @@ What to display your song data in:
 
 ## JavaScript: Refactor Arrays to Objects
 
-11. [ ] Comment out the arrays data.
+11. [] Comment out the arrays data.
 12. [ ] Create an object for each of your songs.
 13. [ ] Inside each object, add key/value pairs to store the image url, song name, artist, and song link.
 14. [ ] Create an array that stores all of the objects.
