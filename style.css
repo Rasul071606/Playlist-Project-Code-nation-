@@ -1,3 +1,7 @@
+/* *{
+    border: solid 4px red;
+} */
+
 html, body {
   height: 100%;
   width: 100%;
@@ -5,6 +9,8 @@ html, body {
 
 h1 {
   text-align: center;
+    font-family: 'Tilt Neon', cursive;;
+    font-size: 7em;
 }
 
 .display {
@@ -53,7 +59,9 @@ h1 {
   display: block;
   font-size: 18px;
   height: 100px;
-  font-weight: bold;
+  font-weight: bolder;
+    color: black;
+    
   
 }
 
@@ -61,12 +69,15 @@ h1 {
   width: 75%;
   margin: 0 auto 20px auto;
   font-size: 18px;
+
 }
 
 input {
   padding: 5px 10px;
   font-size: 14px;
   color: black;
+    margin: auto;
+    border: solid 3px black;
 }
 
 button {
@@ -76,10 +87,11 @@ button {
 }
 
 body {
-  background: url(https://i.pinimg.com/originals/b8/4f/41/b84f4195a6d33c93d01111287c0c7b7e.jpg);
+  background-color: #6564db;
 color: white;
 }
 
 h4{
-  color: white;
+  color: black;
+    font-weight: bolder;
 }
